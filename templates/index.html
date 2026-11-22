@@ -4,18 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthigaiselvan | Portfolio</title>
+    <title>S. Karthigaiselvan | Portfolio</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: white;
+        }
+
+        header {
+            background: #080e19;
+            padding: 22px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .navbar h2 span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            margin: 15px;
+        }
+
+        .welcome {
+            color: #38bdf8;
+        }
+
+        .section-title {
+            color: #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .content {
+            background: #1e293b;
+            padding: 25px;
+            max-width: 650px;
+            margin: auto;
+            border-radius: 12px;
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .card, .project-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            min-width: 140px;
+        }
+
+        .project-card {
+            max-width: 300px;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 13px 25px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+        }
+
+        footer {
+            background: #080e19;
+            text-align: center;
+            padding: 25px;
+            line-height: 2;
+        }
+
+        @media(max-width: 600px) {
+            .navbar {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <h2>Karthi<span>.</span></h2>
+<header>
+    <div class="navbar">
+        <h2>Karthi<span>.</span></h2>
 
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,121 +167,115 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+<section id="home" class="hero">
+    <div>
+        <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-            <h1>Hi, I'm <span>S. Karthigaiselvan</span></h1>
+        <h1>Hi, I'm <span>S. Karthigaiselvan</span></h1>
 
-            <h2>Python & Web Development Enthusiast</h2>
+        <h2>Python & Web Development Enthusiast</h2>
 
-            <p>
-                I am a B.Sc Information Technology student
-                passionate about programming, web development
-                and creating useful applications.
-            </p>
-
-            <a href="#projects" class="btn">Explore My Work</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-
-        <div class="content">
-            <p>
-                I am currently pursuing my B.Sc Information
-                Technology at The Madura College.
-
-                I am interested in Python programming,
-                web development and full-stack development.
-
-                My goal is to improve my technical skills
-                and build real-world applications.
-            </p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-
-        <div class="cards">
-            <div class="card">Python</div>
-            <div class="card">HTML</div>
-            <div class="card">CSS</div>
-            <div class="card">JavaScript</div>
-            <div class="card">MongoDB</div>
-            <div class="card">Git & GitHub</div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title">My Projects</h2>
-
-        <div class="cards">
-            <div class="project-card">
-                <h3>Student Portfolio</h3>
-                <p>
-                    A personal portfolio built using
-                    Python Flask, HTML and CSS.
-                </p>
-            </div>
-
-            <div class="project-card">
-                <h3>Bike Information Website</h3>
-                <p>
-                    A website showcasing motorcycle
-                    brands and their models.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2 class="section-title">Education</h2>
-
-        <div class="content">
-            <h3>B.Sc Information Technology</h3>
-            <p>The Madura College</p>
-            <p>Third Year</p>
-        </div>
-    </section>
-
-    <section id="achievements">
-        <h2 class="section-title">Achievements & Learning</h2>
-
-        <div class="content">
-            <ul>
-                <li>Learning Python programming.</li>
-                <li>Practicing web development.</li>
-                <li>Exploring full-stack development.</li>
-                <li>Learning Git and GitHub.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Contact Me</h2>
-
-        <div class="content">
-            <p>Let's connect and learn together!</p>
-
-            <a href="https://github.com/zarcc-inc"
-               target="_blank" class="btn">
-                Visit My GitHub
-            </a>
-        </div>
-    </section>
-
-    <footer>
         <p>
-            © 2026 S. Karthigaiselvan.
-            All Rights Reserved.
+            B.Sc Information Technology student
+            passionate about programming and web development.
         </p>
-        <p>Built with Python Flask & HTML</p>
-    </footer>
+
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="content">
+        <p>
+            I am pursuing B.Sc Information Technology
+            at The Madura College.
+
+            I am interested in Python programming,
+            web development and full-stack development.
+
+            My goal is to build useful real-world applications.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="cards">
+        <div class="card">Python</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">MongoDB</div>
+        <div class="card">Git & GitHub</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="cards">
+        <div class="project-card">
+            <h3>Student Portfolio</h3>
+            <p>
+                A personal portfolio built using
+                Python Flask, HTML and CSS.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Bike Information Website</h3>
+            <p>
+                A website showcasing motorcycle
+                brands and their models.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="content">
+        <h3>B.Sc Information Technology</h3>
+        <p>The Madura College</p>
+        <p>Third Year</p>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2 class="section-title">Achievements & Learning</h2>
+
+    <div class="content">
+        <p>Learning Python programming.</p>
+        <p>Practicing web development.</p>
+        <p>Exploring full-stack development.</p>
+        <p>Learning Git and GitHub.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="content">
+        <p>Let's connect and learn together!</p>
+
+        <a href="https://github.com/zarcc-inc"
+           target="_blank" class="btn">
+            Visit My GitHub
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 S. Karthigaiselvan</p>
+    <p>Built with Python Flask & HTML</p>
+</footer>
 
 </body>
 </html>
